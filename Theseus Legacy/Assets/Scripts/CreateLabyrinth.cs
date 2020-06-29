@@ -163,8 +163,8 @@ public class CreateLabyrinth : MonoBehaviour
                                 break;
                         }
                     }
+                    LabyrinthParths += 1;
                 }
-                LabyrinthParths += 1;
             }
             else
             {
@@ -716,7 +716,7 @@ public class CreateLabyrinth : MonoBehaviour
                                 break;
                             case 3:
                                 ChunksForBoss[LabyrinthParths + 1] = Instantiate(LabyrinthPart[10], new Vector3(CurentPart.transform.position.x, CurentPart.transform.position.y - LabyrinthPart[14].transform.localScale.y, CurentPart.transform.position.z), Quaternion.identity);
-                                CurentPassageIndex[LabyrinthParths + 1] = 19;
+                                CurentPassageIndex[LabyrinthParths + 1] = 10;
                                 Passages += 1;
                                 break;
                         }
