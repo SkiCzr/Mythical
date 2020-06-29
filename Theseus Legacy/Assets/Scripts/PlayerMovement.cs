@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+    public GameObject Character;
     public float movespeed;
     // Start is called before the first frame update
     void Start()
@@ -18,8 +20,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
-        transform.position += movement * Time.deltaTime * movespeed;
+        Character.transform.position += movement * Time.deltaTime * movespeed;
          movement = new Vector3(0f, Input.GetAxis("Vertical"), 0f);
-        transform.position += movement * Time.deltaTime * movespeed;
+        Character.transform.position += movement * Time.deltaTime * movespeed;
     }
 }
